@@ -116,7 +116,7 @@ body {
   width: 100%;
   max-width: 760px;
   text-align: center;
-  padding: 34px 20px 28px;
+  padding: 34px 20px 30px;
   background: linear-gradient(180deg, rgba(16, 22, 38, 0.84), rgba(8, 12, 22, 0.78));
   border: 1px solid var(--line);
   border-radius: 30px;
@@ -146,13 +146,20 @@ body {
   font-weight: 700;
   letter-spacing: 0.28em;
   color: rgba(255,255,255,0.64);
-  margin-bottom: 20px;
+  margin-bottom: 18px;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.55rem, 11vw, 4.5rem);
+  line-height: 1.02;
+  letter-spacing: -0.05em;
 }
 
 .logo-wrap {
   position: relative;
-  width: min(230px, 58vw);
-  margin: 0 auto 24px;
+  width: min(220px, 56vw);
+  margin: 28px auto 0;
 }
 
 .logo-glow {
@@ -173,42 +180,23 @@ body {
   box-shadow: 0 18px 40px rgba(0,0,0,0.35);
 }
 
-h1 {
-  margin: 0;
-  font-size: clamp(2.55rem, 11vw, 4.4rem);
-  line-height: 1.02;
-  letter-spacing: -0.05em;
-}
-
 /* =========================
-   Features
+   Meta lines under logo
 ========================= */
 
-.feature-row {
-  width: 100%;
-  max-width: 420px;
-  margin: 22px auto 0;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 12px;
+.meta-lines {
+  margin: 18px auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
 }
 
-.feature-row span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 50px;
-  padding: 12px 14px;
-  text-align: center;
+.meta-lines span {
   font-size: 0.95rem;
   font-weight: 500;
-  color: rgba(255,255,255,0.88);
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.10);
-  border-radius: 999px;
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.05),
-    0 8px 20px rgba(0,0,0,0.18);
+  line-height: 1.35;
+  color: rgba(255,255,255,0.82);
 }
 
 /* =========================
@@ -216,68 +204,36 @@ h1 {
 ========================= */
 
 .cta-row {
-  margin-top: 30px;
+  margin-top: 28px;
   display: flex;
   justify-content: center;
   position: relative;
   z-index: 3;
 }
 
-.app-store-btn {
-  display: flex;
+.join-btn {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
   width: 100%;
-  max-width: 420px;
-  padding: 16px 20px;
+  max-width: 320px;
+  min-height: 56px;
+  padding: 0 24px;
   text-decoration: none;
   color: var(--text);
-  border-radius: 20px;
-  background: rgba(255,255,255,0.06);
+  font-size: 1.05rem;
+  font-weight: 700;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.08);
   border: 1px solid rgba(255,255,255,0.12);
   box-shadow: 0 12px 28px rgba(0,0,0,0.22);
   transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
-  position: relative;
-  z-index: 3;
 }
 
-.app-store-btn:hover {
+.join-btn:hover {
   transform: translateY(-2px);
-  background: rgba(255,255,255,0.09);
-  border-color: rgba(255,255,255,0.20);
-}
-
-.apple-icon {
-  font-size: 2rem;
-  line-height: 1;
-  flex-shrink: 0;
-}
-
-.btn-copy {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  text-align: left;
-  line-height: 1.05;
-  flex-shrink: 0;
-}
-
-.btn-copy small,
-.btn-copy strong {
-  white-space: nowrap;
-}
-
-.btn-copy small {
-  color: rgba(255,255,255,0.72);
-  font-size: 0.74rem;
-  letter-spacing: 0.02em;
-}
-
-.btn-copy strong {
-  font-size: 1.25rem;
-  font-weight: 700;
+  background: rgba(255,255,255,0.11);
+  border-color: rgba(255,255,255,0.18);
 }
 
 /* =========================
@@ -290,56 +246,37 @@ h1 {
   }
 
   .hero-card {
-    padding: 28px 16px 24px;
+    padding: 28px 16px 26px;
     border-radius: 24px;
   }
 
   .hero-topline {
-    margin-bottom: 18px;
+    margin-bottom: 16px;
     font-size: 11px;
   }
 
-  .logo-wrap {
-    width: min(210px, 62vw);
-    margin-bottom: 18px;
-  }
-
   h1 {
-    font-size: clamp(2.25rem, 12vw, 3.7rem);
+    font-size: clamp(2.25rem, 12vw, 3.8rem);
   }
 
-  .feature-row {
-    max-width: 320px;
-    gap: 10px;
+  .logo-wrap {
+    width: min(200px, 58vw);
+    margin-top: 24px;
   }
 
-  .feature-row span:last-child {
-    grid-column: auto;
-    max-width: none;
-    justify-self: stretch;
+  .meta-lines {
+    margin-top: 16px;
+    gap: 5px;
   }
 
-  .feature-row span {
-    min-height: 46px;
+  .meta-lines span {
     font-size: 0.92rem;
-    padding: 10px 12px;
   }
 
-  .app-store-btn {
+  .join-btn {
     max-width: 100%;
-    padding: 15px 16px;
-    border-radius: 18px;
-  }
-
-  .apple-icon {
-    font-size: 1.9rem;
-  }
-
-  .btn-copy small {
-    font-size: 0.7rem;
-  }
-
-  .btn-copy strong {
-    font-size: 1.12rem;
+    min-height: 54px;
+    font-size: 1rem;
+    border-radius: 16px;
   }
 }
